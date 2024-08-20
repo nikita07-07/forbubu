@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for Bubu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #fff0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .message-box {
+            background-color: #ffe6e6;
+            border: 2px solid #e63946;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 80%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .heart {
+            color: #ff4757;
+            font-size: 24px;
+            position: absolute;
+            animation: float 10s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>To My Dearest Bubu 😍</h1>
+        <p>
+            Bubu, you are one of the bestest people I have ever got in my life after my friends.<br><br>
+            Itna samjhna mujhe, itna jhelna mujhe, not an easy task at all.<br><br>
+            This is just an appreciation message ki Yes, you have been the best boyfriend and thodi bhot galti maaf krdi maine 🥴 but anyways I love you so much bubu ji or should I say hone wale pati if possible 😂.<br><br>
+            Also, you are doing the best in your life. Never doubt yourself. Aap mast ho. Yes, life is not sidha for you but theek hai. Things are still going better than so many messed up people's life, so appreciate that please.<br><br>
+            Mahadev hamesha raksha karenge tumhri. I just wish the best for you.
+        </p>
+    </div>
+
+    <script>
+        function createFloatingHearts() {
+            const numHearts = 30;
+            for (let i = 0; i < numHearts; i++) {
+                const heart = document.createElement('div');
+                heart.textContent = '❤️ 💖';
+                heart.classList.add('heart');
+                heart.style.left = `${Math.random() * 90}%`;
+                heart.style.top = `${Math.random() * 90}%`;
+                heart.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                document.body.appendChild(heart);
+            }
+        }
+
+        createFloatingHearts();
+    </script>
+</body>
+</html>
